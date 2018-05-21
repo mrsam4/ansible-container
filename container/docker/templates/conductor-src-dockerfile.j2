@@ -31,7 +31,7 @@ RUN yum -y update-minimal --disablerepo "*" \
     yum clean all
 {% elif distro in ["debian", "ubuntu"] %}
 RUN apt-get update -y && \
-    apt-get install -y make dpkg-dev curl gcc git libffi-dev libpopt0 libssl-dev python2.7 python-apt python-dev rsync sudo && \
+    apt-get install -y make dpkg-dev curl gcc git libffi-dev libpopt0 libssl-dev python2.7 python-apt python-dev rsync sudo nodejs npm && \
     cd /usr/bin && \
     rm -f lsb_release && \
     ln -fs python2.7 python && \
